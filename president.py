@@ -2,7 +2,7 @@ from datetime import date
 
 
 class President():
-    def __init__(self, index):
+    def __init__(self, index: int):
         self._get_data(index)
 
     @staticmethod

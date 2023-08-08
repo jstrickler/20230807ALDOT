@@ -6,18 +6,27 @@ class Spam():
 
 @pytest.fixture
 def spam():
+    """
+    Instance of Spam
+    """
     return Spam()
 
 @pytest.fixture
 def colors():
+    """
+    A list of colors
+    """
     return ['pink', 'orange', 'purple', 'green']
 
 @pytest.fixture
 def before_after():
-    print("\n******* BEFORE! *******")
+    """
+    Value 100 with setup and teardown
+    """
+    print("\n******* BEFORE! *******")  # setup -- before test runs
     yield 100
     print("\n"
-          "******* AFTER! *******")
+          "******* AFTER! *******")  # teardown -- after test runs
 
 def test_get_five_returns_five(spam):
     assert spam.get_five() == 5
@@ -48,3 +57,6 @@ def test_temp_dir3(tmpdir):
 def test_temp_dir4(tmpdir):
     print("TEMP DIR:", str(tmpdir))
     assert 1
+
+if __name__ == "__main__":
+    pytest.main([__file__, "-v"])

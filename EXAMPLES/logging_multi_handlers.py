@@ -4,7 +4,7 @@ screen_handler = logging.StreamHandler()
 screen_handler.setLevel(logging.ERROR)
 
 file_handler = logging.FileHandler("../LOGS/multihandlers.log")
-file_handler.setLevel(logging.INFO)
+file_handler.setLevel(logging.DEBUG )
 
 logging.basicConfig(
     handlers=[screen_handler, file_handler],

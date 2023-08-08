@@ -7,9 +7,9 @@ d = {a.lower(): len(a) for a in animals}  # Create a dictionary with key/value p
 
 print(d, '\n')
 
-words = ['unicorn', 'stigmata', 'barley', 'bookkeeper']
+# words = ['unicorn', 'stigmata', 'barley', 'bookkeeper']
 
-d = {w:{c:w.count(c) for c in sorted(w)} for w in words} # Use a nested dictionary comprehension to create a dictionary mapping words to dictionaries which map letters to their counts (could be useful for anagrams)
+# d = {w:{c:w.count(c) for c in sorted(w)} for w in words} # Use a nested dictionary comprehension to create a dictionary mapping words to dictionaries which map letters to their counts (could be useful for anagrams)
 
-for word, word_signature in d.items():
-    print(word, word_signature)
+# for word, word_signature in d.items():
+#     print(word, word_signature)

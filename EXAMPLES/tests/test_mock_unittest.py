@@ -4,7 +4,7 @@ import hamlib
 
 HAM_VALUE = 42
 
-def test_spam_calls_ham(mocker):
+def test_spam_calls_ham(mocker):   # 'mocker' comes from pytest-mock
     mocker.patch('hamlib.ham', return_value=HAM_VALUE * 10)
     s = Spam(HAM_VALUE)  # Create instance of Spam, which calls ham()
     assert s.value == HAM_VALUE * 10
