@@ -5,12 +5,12 @@ from carddeck import CardDeck
 deck = CardDeck("Leonard")
 
 things = (
-    geometry,
-    geometry.circle_area,
-    CardDeck,
-    CardDeck.get_ranks,
-    deck,
-    deck.shuffle,
+    geometry,     # module
+    geometry.circle_area,   # function in a module
+    CardDeck,   # class
+    CardDeck.get_ranks,   # class method
+    deck,   # instance
+    deck.shuffle,   # instance method
 )
 
 print("Name               Module?  Function?  Class?  Method?")

@@ -1,0 +1,54 @@
+import logging
+from functools import wraps
+
+logging.basicConfig(
+    format='%(levelname)s %(name)s %(asctime)s %(filename)s %(lineno)d %(message)s', # set the format for log entries
+    datefmt="%x-%X",
+    level=logging.INFO,
+    filename="deco.log",
+)
+
+def function_logger(some_func):
+
+    @wraps(some_func)
+    def new_func(*args, **kwargs):
+        logging.info("Calling %s", some_func.__name__)
+        some_func(*args, **kwargs)
+    return new_func
+
+@function_logger
+def spam(count):
+    print("Spam!" * count)
+
+@function_logger
+def ham():
+    print("Ham!")
+
+# spam = wrapper(spam)   # apply wrapper() to spam
+# ham = wrapper(ham)
+
+spam(5)
+ham()
+
+for f in spam, ham:
+    print(f.__name__)
+
+class FunctionLogger:
+
+    def __init__(self, old_func):
+        self.old_func = old_func
+
+    def __call__(self, *args, **kwargs):
+        logging.info("Calling %s", self.old_func.__name__)
+        return self.old_func(*args, **kwargs)
+
+@FunctionLogger
+def toast():
+    print("Toast Toast Toast Toast Toast")
+
+@FunctionLogger
+def eggs(count):
+    print("egg " * count)
+
+toast()
+eggs(10)

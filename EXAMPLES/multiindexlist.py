@@ -39,4 +39,4 @@ if __name__ == '__main__':
     print()
     for fruit in m:
         print(fruit)
-    print(len(fruit))
+    print(len(m))
