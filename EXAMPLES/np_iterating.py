@@ -21,3 +21,9 @@ print()
 print("for elem in a.flat: =>")
 for elem in a.flat:  # iterate over all elements (row-major)
     print("element:", elem)
+
+
+np.float
+
+
+
