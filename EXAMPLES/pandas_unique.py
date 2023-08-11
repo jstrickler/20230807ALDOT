@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_excel('https://qrc.depaul.edu/Excel_Files/Presidents.xlsx', sheet_name='Master',
+df = pd.read_excel("../DATA/Presidents.xlsx", sheet_name='Master',
                   na_values='NA()')
 df.index = range(1,len(df)+1)
 
@@ -13,3 +13,4 @@ print(party_counts)
 plt.figure(figsize=(20.0,8.0))
 party_counts.plot(kind='barh')
 plt.show()
+plt.savefig("potus.png")
