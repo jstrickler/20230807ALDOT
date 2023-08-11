@@ -14,6 +14,8 @@ MOVIE_TITLES = [
     'Bullet Train',
     'Death on the Nile',
     'Casablanca',
+    'Oppenheimer',
+    'Barbie',
 ]
 
 def main():

@@ -15,7 +15,8 @@ SEARCH_TERMS = [  # terms to search for; each thread will search some of these t
     'business', 'frog', 'muntin', 'automobile',
     'green', 'connect','vial', 'battery', 'computer',
     'sing', 'park', 'ladle', 'ram', 'dog', 'scalpel',
-    'emulsion', 'noodle', 'combo', 'battery'
+    'emulsion', 'noodle', 'combo', 'battery', 'highway',
+    'overpass', 'cloverleaf'
 ]
 def main():
     for function in get_data_threaded, get_data_serial:

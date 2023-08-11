@@ -22,6 +22,8 @@ def main():
 
         print("raw DATA:")
         pprint(response.json())
+        print('-' * 60)
+        print(response.elapsed)
     else:
         print(f"response.status_code: {response.status_code}")
 
